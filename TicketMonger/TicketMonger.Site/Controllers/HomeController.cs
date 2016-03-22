@@ -13,6 +13,7 @@ namespace TicketMonger.Site.Controllers
             return View();
         }
 
+        [Route("/wibble/wobble")]
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
