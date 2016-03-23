@@ -20,33 +20,42 @@ namespace TicketMonger.Core
                     {
                         if (_allEvents == null)
                         {
-                            //    List<Venue> venues = new List<Venue>();
-                            //    venues.Add(new Venue(
-                            //        "Park Lane Hotel",
-                            //        new Address(
-                            //            "Park Lane Hotel", "142", "Park Lane", "", "London", "", "W1A QQ2", "UK"
-                            //            ),
-                            //        "The Park Lane Hotel is a very nice hotel for conferences and other events.",
-                            //        "555-1212",
-                            //        "events@parklanehotel.fake",
-                            //        "www.parklanehotel.fake",
-                            //        "@parklanehotelfake"
-                            //        ));
+                            List<Event> events = new List<Event>();
+                            events.Add(new Event(
+                                "TechSprint 2016",
+                                "A Euromoney hackathon. With James Counter organising, this will run as smooth as butter.",
+                                DateTime.Parse("01/11/16"), 
+                                DateTime.Parse("03/11/16"), 
+                                Venue.AllVenues.SingleOrDefault(v => v.Name == "Park Lane Hotel"),
+                                1000M
+                                ));
+                            events.Add(new Event(
+                                "BUILD 2016",
+                                "Microsoft's premier developer conference, held this year in San Fransisco, USA.",
+                                DateTime.Parse("01/06/16"),
+                                DateTime.Parse("03/06/16"),
+                                Venue.AllVenues.SingleOrDefault(v => v.Name == "National Motorcycle Museum"),
+                                1599.99M,
+                                1400M
+                                ));
+                            events.Add(new Event(
+                                 "Euromoney Digital Summit",
+                                 "If you don't want to go to this, you're probably already dead.",
+                                 DateTime.Parse("11/03/16"),
+                                 DateTime.Parse("11/03/16"),
+                                 Venue.AllVenues.SingleOrDefault(v => v.Name == "Park Lane Hotel"),
+                                 1000M
+                                 ));
+                            events.Add(new Event(
+                                 "David Whitney's Code Grotto",
+                                 "David is the Bad Santa of the Code Dojo world. Come and see why.",
+                                 DateTime.Parse("01/05/16"),
+                                 DateTime.Parse("01/05/16"),
+                                 Venue.AllVenues.SingleOrDefault(v => v.Name == "National Motorcycle Museum"),
+                                 1000M
+                                 ));
 
-                            //    venues.Add(new Venue(
-                            //        "National Motorcycle Museam",
-                            //        new Address(
-                            //            "Midlands Motor Museum", "", "", "Coleshill", "Birmingham", "", "B2 2JP", "UK"
-                            //            ),
-                            //        "The National Motorcycle Museum is an ideal place for automotive events.",
-                            //        "555-1212",
-                            //        "events@nmm.fake",
-                            //        "www.nmm.fake",
-                            //        "@nmmfake"
-                            //        ));
-
-                            //    _allVenues = venues;
-
+                            _allEvents = events;
                         }
                     }
                 }
@@ -56,6 +65,7 @@ namespace TicketMonger.Core
         }
 
         public string Name { get; }
+        public string Description { get; }
         public DateTime Starts { get; }
         public DateTime Ends { get; }
         public Venue Venue { get; }
@@ -67,10 +77,11 @@ namespace TicketMonger.Core
             // do nothing yet, awaiting plumbing
         }
        
-        public Event(string name, DateTime starts, DateTime ends, Venue venue, decimal price, decimal? earlyBirdPrice = null)
+        public Event(string name, string description, DateTime starts, DateTime ends, Venue venue, decimal price, decimal? earlyBirdPrice = null)
         {
             Name = name;
             Starts = starts;
+            Description = description;
             Ends = ends;
             Venue = venue;
             Price = price;

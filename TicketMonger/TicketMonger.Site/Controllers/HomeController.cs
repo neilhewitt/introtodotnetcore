@@ -10,10 +10,9 @@ namespace TicketMonger.Site.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(new HomeViewModel());
         }
 
-        [Route("/wibble/wobble")]
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model TicketMonger.Site.HomeViewModel
+@addTagHelper "*, TicketMonger.Site"
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -46,28 +48,35 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
-                            <div class="caption">
-                                <h4 class="pull-right">from £1599</h4>
-                                <h4>
-                                    <a href="#">BUILD 2016</a>
-                                </h4>
-                                <p>Microsoft's premier developer conference, held this year in San Fransisco, USA.</p>
-                            </div>
-                            <div class="ratings">
-                                <p class="pull-right">15 reviews</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                </p>
+                    @*@foreach (var e in Model.TopEvents)
+                    {
+                        @Component.Invoke("Event", e)
+                    }*@
+                    @*@foreach (var e in Model.TopEvents)
+                    {
+                        <div class="col-sm-4 col-lg-4 col-md-4">
+                            <div class="thumbnail">
+                                <img src="http://placehold.it/320x150" alt="">
+                                <div class="caption">
+                                    <h4 class="pull-right">@e.Price.ToString("C")</h4>
+                                    <h4>
+                                        <a href="#">@e.Name</a>
+                                    </h4>
+                                    <p>@e.Description</p>
+                                </div>
+                                <div class="ratings">
+                                    <p class="pull-right">15 reviews</p>
+                                    <p>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    }*@
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
                             <img src="http://placehold.it/320x150" alt="">

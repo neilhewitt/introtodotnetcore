@@ -1,4 +1,4 @@
-﻿{
+{
   "userSecretsId": "aspnet5-TicketMonger.Site-b7cde644-638d-42a2-a4d2-93e10cfce7dd",
   "version": "1.0.0-*",
   "compilationOptions": {
@@ -26,7 +26,8 @@
     "Microsoft.Extensions.Logging": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
-    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc1-final"
+    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc1-final",
+    "TicketMonger.Core": "1.0.0-*"
   },
 
   "commands": {
