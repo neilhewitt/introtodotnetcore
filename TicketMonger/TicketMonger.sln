@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TicketMonger.Site", "TicketMonger.Site\TicketMonger.Site.xproj", "{0657D05E-AB16-49BA-B76E-832060C6952C}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MusicStore", "..\..\MusicStore\src\MusicStore\MusicStore.xproj", "{3CFBED5D-2ED8-49DB-96FB-BDAA748DC5A0}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TicketMonger.Core", "TicketMonger.Core\TicketMonger.Core.xproj", "{B18BCC2E-D449-4D38-B20F-F1697A960EA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{0657D05E-AB16-49BA-B76E-832060C6952C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0657D05E-AB16-49BA-B76E-832060C6952C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0657D05E-AB16-49BA-B76E-832060C6952C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CFBED5D-2ED8-49DB-96FB-BDAA748DC5A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CFBED5D-2ED8-49DB-96FB-BDAA748DC5A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CFBED5D-2ED8-49DB-96FB-BDAA748DC5A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CFBED5D-2ED8-49DB-96FB-BDAA748DC5A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B18BCC2E-D449-4D38-B20F-F1697A960EA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B18BCC2E-D449-4D38-B20F-F1697A960EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B18BCC2E-D449-4D38-B20F-F1697A960EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B18BCC2E-D449-4D38-B20F-F1697A960EA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
